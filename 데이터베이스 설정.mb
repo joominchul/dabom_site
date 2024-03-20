@@ -1,0 +1,20 @@
+[application.properties]
+
+spring.datasource.driverClassName=org.mariadb.jdbc.Driver
+spring.datasource.url=jdbc:mariadb://127.0.0.1:3306/mydb
+spring.datasource.username=root
+spring.datasource.password=1234
+
+mybatis.configuration.map-underscore-to-camel-case=true
+mybatis.type-aliases-package=com.example.apt.entity
+mybatis.mapper-locations= mapper/*.xml
+
+server.port=8080
+
+*********************
+
+데이터베이스 생성 : 첨부된 '데이터베이스 생성 쿼리.sql' 참고.
+
+웹 크롤링 데이터 가져오기 : 첨부된 'apt.csv'를 가져오기.
+
+HeidiSQL 기준.
