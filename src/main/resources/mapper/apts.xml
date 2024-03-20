@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.apt.repository.MybatisAptRepository">
+    <select id="findAll" resultType="AptEntity">
+        select
+        *
+        from
+        apt
+    </select>
+
+    <select id="findCond" parameterType="AptEntity" resultType="AptEntity">
+        select *
+        from apt
+        where name like concat('%', #{name}, '%')
+        and address like concat('%', #{address}, '%')
+        and yprice between #{ymin} and #{ymax}
+        and dprice between #{dmin} and #{dmax}
+
+    </select>
+
+    <insert id="save" parameterType="AptEntity" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        insert into apt
+        (name, address, yprice, dprice)
+        values
+        (#{name}, #{address}, #{yprice}, #{dprice})
+    </insert>
+
+    <select id="findById" parameterType="Long" resultType="AptEntity">
+        select
+        *
+        from
+        apt
+        where
+        id = #{id}
+    </select>
+
+    <update id="update" parameterType="AptEntity">
+        update apt set
+        name = #{name}, address = #{address}, yprice = #{yprice}, dprice = #{dprice}
+        where
+        id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="AptEntity">
+        delete from apt
+        where
+        id = #{id}
+    </delete>
+
+</mapper>

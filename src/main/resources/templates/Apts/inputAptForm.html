@@ -1,0 +1,212 @@
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Blog Page</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.ico">
+
+  <!--Google Fonts link-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/css/slick.css">
+  <link rel="stylesheet" href="/css/slick-theme.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/css/fonticons.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/magnific-popup.css">
+  <link rel="stylesheet" href="/css/bootsnav.css">
+
+
+  <!--For Plugins external css-->
+  <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
+
+  <!--Theme custom css -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
+
+  <!--Theme Responsive css-->
+  <link rel="stylesheet" href="/css/responsive.css" />
+
+  <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar-collapse">
+
+<div class="culmn">
+  <!--Home page style-->
+
+
+  <nav class="navbar navbar-default navbar-fixed white no-background bootsnav text-uppercase">
+
+
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="home.html">
+
+
+
+        </a>
+      </div>
+      <!-- End Header Navigation -->
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+          <li><a href="/">home</a></li>
+          <li><a href="/apts">매물 목록</a></li>
+          <li><a href="/apts/new">매물 추가</a></li>
+          <li><a href="/apts/search">매물 검색</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+  <!--Home Sections-->
+  <section id="hello" class="home bg-mega">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="main_home text-center">
+          <div class="home_text">
+            <h4 class="text-white text-uppercase">박찬승, 주민철, 홍수환</h4>
+            <h1 class="text-white text-uppercase">다봄</h1>
+
+            <div class="separator"></div>
+
+            <h5 class=" text-uppercase text-white"><em>아파트 시세 정보 검색 시스템</em></h5>
+          </div>
+        </div>
+      </div><!--End off row-->
+    </div><!--End off container -->
+  </section>
+  <section id="feature" class="feature p-top-100">
+    <div class="container">
+      <div class="row">
+        <div class="main_feature">
+
+          <div class="col-md-6 m-top-120">
+            <!-- Head Title -->
+            <div class="head_title">
+              <h1>매물 관리 시스템</h1>
+              <h4>아래 입력 폼에 추가할 아파트 정보를 입력하시오.</h4>
+              <div class="separator_left"></div>
+            </div><!-- End off Head Title -->
+
+            <div class="container">
+              <form action="/apts/new" method="post">
+                <div class="form-group">
+
+                  <p><label for="name"style="font-size:20px;">&nbsp아파트명&nbsp</label>
+                    <input type="text" id="name" name="name"  placeholder="아파트명을 입력하세요" style="width:250px;height:35px;font-size:20px;">
+                  </p>
+                  </br>
+                  <p><label for="address"style="font-size:20px;">&nbsp&nbsp&nbsp&nbsp&nbsp주&nbsp&nbsp소&nbsp&nbsp&nbsp&nbsp</label>
+                    <input type="text" id="address" name="address"
+                           placeholder="주소를 입력하세요" style="width:250px;height:35px;font-size:20px;">
+                  </p>
+                  </br>
+                  <p><label for="yprice"style="font-size:20px;">전세 가격&nbsp</label>
+                    <input type="text" id="yprice" name="yprice"
+                           placeholder="전세 가격을 입력하세요" style="width:250px;height:35px;font-size:20px;"><a>(만원)</a>
+                  </p>
+                  </br>
+                  <p><label for="dprice"style="font-size:20px;">매매 가격&nbsp</label>
+                    <input type="text" id="dprice" name="dprice"
+                           placeholder="매매 가격을 입력하세요" style="width:250px;height:35px;font-size:20px;"><a>(만원)</a>
+                  </p>
+
+                </div>
+                <button type="submit" class="btn btn-default m-top-20" style="margin-left: 20px;font-size:20px;"><a>등록</a><i class="fa fa-long-arrow-right"></i></button>
+                <button type="reset" class="btn btn-default m-top-20" style="margin-left: 20px;font-size:20px;"><a>취소</a><i class="fa fa-long-arrow-right"></i></button>
+              </form>
+            </div> <!-- /container -->
+          </div>
+          <div class="col-md-6">
+            <div class="feature_photo wow fadeIn sm-m-top-40">
+              <div class="photo_border"></div>
+              <div class="feature_img">
+                <img src="/images/feature-img_i.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!--End off row-->
+    </div><!--End off container -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <hr />
+    <br />
+    <br />
+  </section>
+
+
+
+  <!-- scroll up-->
+  <div class="scrollup">
+    <a href="#"><i class="fa fa-chevron-up"></i></a>
+  </div><!-- End off scroll up -->
+
+
+  <footer id="footer" class="footer bg-mega">
+    <div class="container">
+      <div class="row">
+        <div class="main_footer p-top-40 p-bottom-30">
+          <div class="col-md-6 text-left sm-text-center">
+            <p class="wow fadeInRight" data-wow-duration="1s">
+              Made with
+              <i class="fa fa-heart"></i>
+              by
+              <a target="_blank" href="http://bootstrapthemes.co">Bootstrap Themes</a>
+              2016. All Rights Reserved
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+</div>
+
+<!-- JS includes -->
+
+<script src="/js/vendor/jquery-1.11.2.min.js"></script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+
+<script src="/js/isotope.min.js"></script>
+<script src="/js/jquery.magnific-popup.js"></script>
+<script src="/js/jquery.easing.1.3.js"></script>
+<script src="/js/slick.min.js"></script>
+<script src="/js/jquery.collapse.js"></script>
+<script src="/js/bootsnav.js"></script>
+<script src="/js/masonry.min.js"></script>
+
+<script type="text/javascript">
+        var msnry = new Masonry('.blog_area');
+    </script>
+
+<script src="/js/plugins.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
+
+</html>
